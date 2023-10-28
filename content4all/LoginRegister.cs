@@ -66,11 +66,11 @@ namespace content4all
             {
                 if (textBox2.Text == textBox3.Text)
                 {
+                    kullanicilar.Add(textBox1.Text,textBox2.Text);
                     toolStripStatusLabel1 = new ToolStripStatusLabel();
-                    toolStripStatusLabel1.Text = "Kayýt baþarýlý.";
                     toolStripStatusLabel1.ForeColor = Color.Green;
                     statusStrip1.Items.Add(toolStripStatusLabel1);
-                    //MessageBox.Show("Kayýt Baþarýlý.");
+                    toolStripStatusLabel1.Text = "Kayýt baþarýlý.";
                     radioButton1.Checked = true;
                     textBox1.Clear();
                     textBox2.Clear();
@@ -82,7 +82,7 @@ namespace content4all
                 if (kullanicilar.ContainsKey(textBox1.Text) && kullanicilar[textBox1.Text] == textBox2.Text)
                 {
                     this.Hide();
-                    MessageBox.Show("Giriþ baþarýlý.");
+                    toolStripStatusLabel1.Text = "Giriþ baþarýlý.";
                     main.ShowDialog();
                     ///////////////////
                     Application.Exit();
