@@ -40,6 +40,7 @@
             label2 = new Label();
             button3 = new Button();
             pictureBox2 = new PictureBox();
+            linkLabel1 = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -177,15 +178,25 @@
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
             // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Location = new Point(291, 373);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(74, 15);
+            linkLabel1.TabIndex = 5;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Terms of Use";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
             // mainmenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(374, 371);
+            ClientSize = new Size(374, 391);
+            Controls.Add(linkLabel1);
             Controls.Add(panel1);
             Controls.Add(groupBox1);
-            MaximumSize = new Size(390, 410);
-            MinimumSize = new Size(390, 410);
             Name = "mainmenu";
             Text = "Content 4 All";
             Load += mainmenu_Load;
@@ -194,6 +205,7 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -210,5 +222,6 @@
         private Button button3;
         private Label label4;
         private Label label3;
+        private LinkLabel linkLabel1;
     }
 }

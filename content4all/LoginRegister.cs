@@ -64,17 +64,26 @@ namespace content4all
             mainmenu main = new mainmenu();
             if (radioButton2.Checked)
             {
-                if (textBox2.Text == textBox3.Text)
+                if (textBox2.Text == textBox3.Text && textBox2.Text != "")
                 {
                     kullanicilar.Add(textBox1.Text,textBox2.Text);
-                    toolStripStatusLabel1 = new ToolStripStatusLabel();
                     toolStripStatusLabel1.ForeColor = Color.Green;
-                    statusStrip1.Items.Add(toolStripStatusLabel1);
                     toolStripStatusLabel1.Text = "Kayýt baþarýlý.";
                     radioButton1.Checked = true;
                     textBox1.Clear();
                     textBox2.Clear();
                     textBox3.Clear();
+                }
+                else if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text=="")
+                {
+                    toolStripStatusLabel1.ForeColor = Color.Red;
+                    toolStripStatusLabel1.Text = "Lütfen boþ býrakmayýn.";
+                }
+                else
+                {
+                    toolStripStatusLabel1.ForeColor = Color.Red;
+                    toolStripStatusLabel1.Text = "Þifreleri kontrol ediniz.";
+
                 }
             }
             else if (radioButton1.Checked)
@@ -86,6 +95,16 @@ namespace content4all
                     main.ShowDialog();
                     ///////////////////
                     Application.Exit();
+                }
+                else if (textBox1.Text=="" || textBox2.Text == "")
+                {
+                    toolStripStatusLabel1.ForeColor = Color.Red;
+                    toolStripStatusLabel1.Text = "Lütfen boþ býrakmayýn.";
+                }
+                else
+                {
+                    toolStripStatusLabel1.ForeColor = Color.Red;
+                    toolStripStatusLabel1.Text = "Giriþ bilgileri hatalý.";
                 }
             }
         }
