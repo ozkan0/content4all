@@ -30,9 +30,6 @@
         {
             pictureBox1 = new PictureBox();
             groupBox1 = new GroupBox();
-            label1 = new Label();
-            button2 = new Button();
-            button1 = new Button();
             panel1 = new Panel();
             label4 = new Label();
             label3 = new Label();
@@ -40,8 +37,13 @@
             label2 = new Label();
             button3 = new Button();
             pictureBox2 = new PictureBox();
+            button2 = new Button();
+            label1 = new Label();
+            button1 = new Button();
             linkLabel1 = new LinkLabel();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -59,43 +61,12 @@
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.InactiveCaption;
-            groupBox1.Location = new Point(12, 12);
+            groupBox1.Controls.Add(panel1);
+            groupBox1.Location = new Point(12, 55);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(355, 358);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.Lime;
-            label1.Location = new Point(279, 169);
-            label1.Name = "label1";
-            label1.Size = new Size(56, 17);
-            label1.TabIndex = 3;
-            label1.Text = "114 UPs";
-            // 
-            // button2
-            // 
-            button2.BackColor = SystemColors.HotTrack;
-            button2.BackgroundImage = Properties.Resources.down2;
-            button2.Location = new Point(279, 209);
-            button2.Name = "button2";
-            button2.Size = new Size(25, 25);
-            button2.TabIndex = 2;
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.BackgroundImage = Properties.Resources.up2;
-            button1.Location = new Point(279, 121);
-            button1.Name = "button1";
-            button1.Size = new Size(25, 25);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // panel1
             // 
@@ -111,7 +82,7 @@
             panel1.Controls.Add(label1);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(button1);
-            panel1.Location = new Point(12, 12);
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(355, 358);
             panel1.TabIndex = 4;
@@ -119,22 +90,22 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label4.Location = new Point(6, 13);
             label4.Name = "label4";
-            label4.Size = new Size(146, 20);
+            label4.Size = new Size(153, 18);
             label4.TabIndex = 9;
-            label4.Text = "Astronaut by BingAI";
+            label4.Text = "\"Astronaut\" by BingAI";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label3.Location = new Point(6, 342);
             label3.Name = "label3";
-            label3.Size = new Size(186, 20);
+            label3.Size = new Size(191, 18);
             label3.TabIndex = 8;
-            label3.Text = "Sky at midnight by BingAI";
+            label3.Text = "\"Sky at midnight\" by BingAI";
             // 
             // button4
             // 
@@ -178,10 +149,42 @@
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
             // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.HotTrack;
+            button2.BackgroundImage = Properties.Resources.down2;
+            button2.Location = new Point(279, 209);
+            button2.Name = "button2";
+            button2.Size = new Size(25, 25);
+            button2.TabIndex = 2;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Lime;
+            label1.Location = new Point(279, 169);
+            label1.Name = "label1";
+            label1.Size = new Size(56, 17);
+            label1.TabIndex = 3;
+            label1.Text = "114 UPs";
+            // 
+            // button1
+            // 
+            button1.BackgroundImage = Properties.Resources.up2;
+            button1.Location = new Point(279, 121);
+            button1.Name = "button1";
+            button1.Size = new Size(25, 25);
+            button1.TabIndex = 1;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(291, 373);
+            linkLabel1.Location = new Point(288, 456);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(74, 15);
             linkLabel1.TabIndex = 5;
@@ -189,18 +192,28 @@
             linkLabel1.Text = "Terms of Use";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(272, 25);
+            label5.Name = "label5";
+            label5.Size = new Size(59, 18);
+            label5.TabIndex = 6;
+            label5.Text = "label5";
+            // 
             // mainmenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(374, 391);
+            ClientSize = new Size(374, 480);
+            Controls.Add(label5);
             Controls.Add(linkLabel1);
-            Controls.Add(panel1);
             Controls.Add(groupBox1);
             Name = "mainmenu";
             Text = "Content 4 All";
-            Load += mainmenu_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBox1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -223,5 +236,6 @@
         private Label label4;
         private Label label3;
         private LinkLabel linkLabel1;
+        private Label label5;
     }
 }

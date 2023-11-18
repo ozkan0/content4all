@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Resources;
-using System.Globalization;
-using content4all.Properties;
+﻿using System.Diagnostics;
 
 namespace content4all
 {
@@ -24,7 +11,7 @@ namespace content4all
         bool but3click = false;
         bool but4click = false;
 
-        public mainmenu()
+        public mainmenu(string kullaniciadi)
         {
             InitializeComponent();
             panel1.AutoScroll = false;
@@ -35,19 +22,7 @@ namespace content4all
             panel1.AutoScroll = true;
             label1.Text = upfor1 + " UPs";
             label2.Text = upfor2 + " UPs";
-        }
-
-        private void mainmenu_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void LoginRegister_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
-        }
-        private void mainmenu_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
+            label5.Text = kullaniciadi;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -116,8 +91,8 @@ namespace content4all
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process p = new Process();
-            ProcessStartInfo psi = new ProcessStartInfo();
+            Process p = new();
+            ProcessStartInfo psi = new();
             psi.FileName = "TOU.html";
             psi.UseShellExecute = true;
             psi.Verb = "open";

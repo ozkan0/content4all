@@ -1,17 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 namespace content4all
 {
     public partial class LoginRegister : Form
     {
+        string kullaniciadi {  get; set; }
         private Dictionary<string, string> kullanicilar;
         public LoginRegister()
         {
@@ -61,7 +52,6 @@ namespace content4all
 
         private void button3_Click(object sender, EventArgs e)
         {
-            mainmenu main = new mainmenu();
             if (radioButton2.Checked)
             {
                 if (textBox2.Text == textBox3.Text && textBox2.Text != "")
@@ -91,6 +81,7 @@ namespace content4all
                 if (kullanicilar.ContainsKey(textBox1.Text) && kullanicilar[textBox1.Text] == textBox2.Text)
                 {
                     this.Hide();
+                    mainmenu main = new(textBox1.Text);
                     toolStripStatusLabel1.Text = "Giriþ baþarýlý.";
                     main.ShowDialog();
                     ///////////////////
@@ -111,7 +102,7 @@ namespace content4all
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Members members = new Members(kullanicilar);
+            Members members = new(kullanicilar);
             members.Show();
         }
     }
