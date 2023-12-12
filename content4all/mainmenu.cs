@@ -1,16 +1,14 @@
-﻿using System.Diagnostics;
+﻿using Contents;
+using System.Diagnostics;
+using System.Drawing;
 
 namespace content4all
 {
     public partial class mainmenu : Form
     {
-        int upfor1 = 114;
-        int upfor2 = 87;
-        bool but1click = false;
-        bool but2click = false;
-        bool but3click = false;
-        bool but4click = false;
+        //this code needs to be cleaner and optimizated
 
+        Contents.ContentDictionary contentDictionary = new Contents.ContentDictionary();
         public mainmenu(string kullaniciadi)
         {
             InitializeComponent();
@@ -20,73 +18,47 @@ namespace content4all
             verticalScroll.Visible = true;
             verticalScroll.Maximum = 100;
             panel1.AutoScroll = true;
-            label1.Text = upfor1 + " UPs";
-            label2.Text = upfor2 + " UPs";
             label5.Text = kullaniciadi;
+            Content content1 = new Content(0, "Astronaut", "BingAI", 114);
+            Content content2 = new Content(1, "Sky at midnight", "BingAI", 87);
+            //will replace with for loop
+            contentDictionary.AddContent(content1);
+            contentDictionary.AddContent(content2);
+
+        }
+        public int ChangeUps(int Id, int change)
+        {
+            int up = ContentDictionary.contents[Id].Ups;
+            int latestup = up + change;
+            return latestup;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (but1click == false && but2click == false)
-            {
-                upfor1 += 1;
-                but1click = true;
-            }
-            else if (but1click == false && but2click == true)
-            {
-                upfor1 += 2;
-                but1click = true;
-                but2click = false;
-            }
-            label1.Text = upfor1 + " UPs";
+            button1.Enabled = false;
+            button2.Enabled = true;
+            label1.Text = ChangeUps(0, 1).ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (but3click == false && but4click == false)
-            {
-                upfor2 += 1;
-                but3click = true;
-            }
-            else if (but3click == false && but4click == true)
-            {
-                upfor2 += 2;
-                but3click = true;
-                but4click = false;
-            }
-            label2.Text = upfor2 + " UPs";
+            button3.Enabled = false;
+            button4.Enabled = true;
+            label2.Text = ChangeUps(1, 1).ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (but2click == false && but1click == false)
-            {
-                upfor1 -= 1;
-                but2click = true;
-            }
-            else if (but2click == false && but1click == true)
-            {
-                upfor1 -= 2;
-                but2click = true;
-                but1click = false;
-            }
-            label1.Text = upfor1 + " UPs";
+            button2.Enabled = false;
+            button1.Enabled = true;
+            label1.Text = ChangeUps(0, -1).ToString();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (but4click == false && but3click == false)
-            {
-                upfor2 -= 1;
-                but4click = true;
-            }
-            else if (but4click == false && but3click == true)
-            {
-                upfor2 -= 2;
-                but3click = false;
-                but4click = true;
-            }
-            label2.Text = upfor2 + " UPs";
+            button4.Enabled = false;
+            button3.Enabled = true;
+            label2.Text = ChangeUps(1, -1).ToString();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

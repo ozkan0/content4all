@@ -23,6 +23,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Contents\Contents.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Contents">
+      <HintPath>..\Contents\bin\Debug\net6.0-windows\Contents.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

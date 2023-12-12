@@ -125,9 +125,9 @@
             label2.ForeColor = Color.Lime;
             label2.Location = new Point(279, 495);
             label2.Name = "label2";
-            label2.Size = new Size(49, 17);
+            label2.Size = new Size(22, 17);
             label2.TabIndex = 7;
-            label2.Text = "87 UPs";
+            label2.Text = "87";
             // 
             // button3
             // 
@@ -167,9 +167,9 @@
             label1.ForeColor = Color.Lime;
             label1.Location = new Point(279, 169);
             label1.Name = "label1";
-            label1.Size = new Size(56, 17);
+            label1.Size = new Size(29, 17);
             label1.TabIndex = 3;
-            label1.Text = "114 UPs";
+            label1.Text = "114";
             // 
             // button1
             // 
