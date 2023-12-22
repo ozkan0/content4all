@@ -1,14 +1,17 @@
+using Contents;
+using System.Security.Cryptography.X509Certificates;
+
 namespace content4all
 {
     public partial class LoginRegister : Form
     {
-        string kullaniciadi {  get; set; }
-        private Dictionary<string, string> kullanicilar;
         public LoginRegister()
         {
             InitializeComponent();
-            kullanicilar = new Dictionary<string, string>();
         }
+
+        Dictionary<string, string> kullanicilar = new Dictionary<string, string>();
+        Members members = new();
 
         private void LoginRegister_Load(object sender, EventArgs e)
         {
@@ -24,7 +27,6 @@ namespace content4all
             radioButton1.Text = "Giriþ Yap";
             radioButton2.Text = "Kayýt Ol";
             button3.Text = "Tamam";
-            button4.Text = "Üyeler";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -35,7 +37,6 @@ namespace content4all
             radioButton1.Text = "Login";
             radioButton2.Text = "Register";
             button3.Text = "OK";
-            button4.Text = "Members";
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -49,6 +50,8 @@ namespace content4all
             label3.Visible = true;
             textBox3.Visible = true;
         }
+        private void StatusRed() { toolStripStatusLabel1.ForeColor = Color.Red; }
+        private void StatusGreen() { toolStripStatusLabel1.ForeColor = Color.Green; }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -56,22 +59,21 @@ namespace content4all
             {
                 if (textBox2.Text == textBox3.Text && textBox2.Text != "")
                 {
-                    kullanicilar.Add(textBox1.Text,textBox2.Text);
-                    toolStripStatusLabel1.ForeColor = Color.Green;
-                    toolStripStatusLabel1.Text = "Kayýt baþarýlý.";
+                    kullanicilar.Add(textBox1.Text, textBox2.Text);
+                    StatusGreen(); toolStripStatusLabel1.Text = "Kayýt baþarýlý.";
                     radioButton1.Checked = true;
                     textBox1.Clear();
                     textBox2.Clear();
                     textBox3.Clear();
                 }
-                else if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text=="")
+                else if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
                 {
-                    toolStripStatusLabel1.ForeColor = Color.Red;
+                    StatusRed();
                     toolStripStatusLabel1.Text = "Lütfen boþ býrakmayýn.";
                 }
                 else
                 {
-                    toolStripStatusLabel1.ForeColor = Color.Red;
+                    StatusRed();
                     toolStripStatusLabel1.Text = "Þifreleri kontrol ediniz.";
 
                 }
@@ -80,30 +82,28 @@ namespace content4all
             {
                 if (kullanicilar.ContainsKey(textBox1.Text) && kullanicilar[textBox1.Text] == textBox2.Text)
                 {
+                    mainmenu.kullaniciadi = textBox1.Text;
                     this.Hide();
-                    mainmenu main = new(textBox1.Text);
+                    mainmenu main = new();
+                    members.SetMembers(kullanicilar);
                     toolStripStatusLabel1.Text = "Giriþ baþarýlý.";
                     main.ShowDialog();
+
                     ///////////////////
                     Application.Exit();
                 }
-                else if (textBox1.Text=="" || textBox2.Text == "")
+                else if (textBox1.Text == "" || textBox2.Text == "")
                 {
-                    toolStripStatusLabel1.ForeColor = Color.Red;
+                    StatusRed();
                     toolStripStatusLabel1.Text = "Lütfen boþ býrakmayýn.";
                 }
                 else
                 {
-                    toolStripStatusLabel1.ForeColor = Color.Red;
+                    StatusRed();
                     toolStripStatusLabel1.Text = "Giriþ bilgileri hatalý.";
                 }
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Members members = new(kullanicilar);
-            members.Show();
-        }
     }
 }

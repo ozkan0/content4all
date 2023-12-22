@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="content4all.LoginRegister">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACEAAAABACQAABAAAACAAABCAEA4AAgAEHAIAAAAgAM=</HashCode>
+      <FileName>LoginRegister.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="content4all.mainmenu">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAASAAAICAEA4AAAAAXAIAQBAAAA=</HashCode>
+      <FileName>mainmenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="content4all.Members">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAAAAAAECAAAACAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Members.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="content4all.Program">
+    <Position X="8.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

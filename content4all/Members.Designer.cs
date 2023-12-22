@@ -33,19 +33,20 @@
             // 
             // listBox1
             // 
-            listBox1.BackColor = SystemColors.GradientInactiveCaption;
+            listBox1.BackColor = Color.FromArgb(128, 255, 128);
+            listBox1.Font = new Font("Comic Sans MS", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(12, 12);
+            listBox1.Location = new Point(5, 11);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(200, 169);
+            listBox1.Size = new Size(172, 139);
             listBox1.TabIndex = 0;
             // 
             // Members
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(224, 201);
+            ClientSize = new Size(183, 159);
             Controls.Add(listBox1);
             Name = "Members";
             Text = "Members";

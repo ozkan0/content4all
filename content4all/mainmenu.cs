@@ -6,25 +6,17 @@ namespace content4all
 {
     public partial class mainmenu : Form
     {
-        //this code needs to be cleaner and optimizated
-
+        //username passing changed from through construct to static property
+        public static string kullaniciadi { get; set; }
         Contents.ContentDictionary contentDictionary = new Contents.ContentDictionary();
-        public mainmenu(string kullaniciadi)
+        public mainmenu()
         {
             InitializeComponent();
-            panel1.AutoScroll = false;
-            VScrollProperties verticalScroll = panel1.VerticalScroll;
-            verticalScroll.Enabled = true;
-            verticalScroll.Visible = true;
-            verticalScroll.Maximum = 100;
-            panel1.AutoScroll = true;
             label5.Text = kullaniciadi;
             Content content1 = new Content(0, "Astronaut", "BingAI", 114);
             Content content2 = new Content(1, "Sky at midnight", "BingAI", 87);
-            //will replace with for loop
             contentDictionary.AddContent(content1);
             contentDictionary.AddContent(content2);
-
         }
         public int ChangeUps(int Id, int change)
         {
@@ -32,7 +24,6 @@ namespace content4all
             int latestup = up + change;
             return latestup;
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             button1.Enabled = false;
@@ -70,6 +61,12 @@ namespace content4all
             psi.Verb = "open";
             p.StartInfo = psi;
             p.Start();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Members members = new();
+            members.Show();
         }
     }
 }
