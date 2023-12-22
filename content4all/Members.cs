@@ -2,13 +2,13 @@
 {
     public partial class Members : Form
     {
-        private Dictionary<string, string> memberList;
-        public Members(Dictionary<string, string> memberList)
+        private static Dictionary<string, string> memberList;
+        public Members()
         {
             InitializeComponent();
-            this.memberList = memberList;
+            //this.memberList = memberList;
         }
-
+        public void SetMembers(Dictionary<string, string> members) { memberList = members; }
         private void Members_Load(object sender, EventArgs e)
         {
             foreach (var pair in memberList)

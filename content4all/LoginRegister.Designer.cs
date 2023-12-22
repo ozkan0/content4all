@@ -39,7 +39,6 @@
             textBox3 = new TextBox();
             label3 = new Label();
             button3 = new Button();
-            button4 = new Button();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             statusStrip1.SuspendLayout();
@@ -149,24 +148,13 @@
             // button3
             // 
             button3.BackColor = Color.FromArgb(192, 255, 192);
-            button3.Location = new Point(109, 203);
+            button3.Location = new Point(98, 203);
             button3.Name = "button3";
             button3.Size = new Size(75, 36);
             button3.TabIndex = 10;
             button3.Text = "Tamam";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
-            // 
-            // button4
-            // 
-            button4.BackColor = Color.Silver;
-            button4.Location = new Point(202, 210);
-            button4.Name = "button4";
-            button4.Size = new Size(70, 23);
-            button4.TabIndex = 11;
-            button4.Text = "Üyeler";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
             // 
             // statusStrip1
             // 
@@ -188,7 +176,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(284, 261);
             Controls.Add(statusStrip1);
-            Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(label3);
             Controls.Add(textBox3);
@@ -224,7 +211,6 @@
         private TextBox textBox3;
         private Label label3;
         private Button button3;
-        private Button button4;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
     }

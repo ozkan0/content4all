@@ -27,20 +27,21 @@
         {
             contents[content.Id] = content;
         }
-        public Content GetContentById(int id)
-        {
-            if (contents.ContainsKey(id))
-            {
-                return contents[id];
-            }
-            else
-            {
-                return null;
-            }
-        }
-        public int GetContentCount()
-        {
-            return contents.Count;
-        }
+        //currently not required
+        //public Content GetContentById(int id)
+        //{
+        //    if (contents.ContainsKey(id))
+        //    {
+        //        return contents[id];
+        //    }
+        //    else
+        //    {
+        //        return null;
+        //    }
+        //}
+        //public static int GetContentCount()
+        //{
+        //    return contents.Count;
+        //}
     }
 }
