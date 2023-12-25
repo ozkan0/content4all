@@ -18,5 +18,9 @@
 
         }
 
+        private void Members_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mainmenu.MembersFormOpen = false;
+        }
     }
 }

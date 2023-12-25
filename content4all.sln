@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "content4all", "content4all\content4all.csproj", "{13FFDBD3-B945-4106-AE3E-EF17FB13BA15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contents", "Contents\Contents.csproj", "{29C37088-9F69-4B4B-A8BA-B6BACC9E8A66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contents", "Contents\Contents.csproj", "{29C37088-9F69-4B4B-A8BA-B6BACC9E8A66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

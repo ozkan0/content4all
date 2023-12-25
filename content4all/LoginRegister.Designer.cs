@@ -46,8 +46,8 @@
             // 
             // button1
             // 
-            button1.BackgroundImage = Properties.Resources.tr__Custom_;
-            button1.Location = new Point(0, 210);
+            button1.BackgroundImage = Properties.Resources.tr;
+            button1.Location = new Point(12, 206);
             button1.Name = "button1";
             button1.Size = new Size(30, 30);
             button1.TabIndex = 0;
@@ -56,8 +56,8 @@
             // 
             // button2
             // 
-            button2.BackgroundImage = Properties.Resources.en__Custom_;
-            button2.Location = new Point(31, 210);
+            button2.BackgroundImage = Properties.Resources.en;
+            button2.Location = new Point(43, 206);
             button2.Name = "button2";
             button2.Size = new Size(30, 30);
             button2.TabIndex = 1;
@@ -87,10 +87,10 @@
             radioButton1.BackColor = Color.FromArgb(255, 255, 192);
             radioButton1.Location = new Point(43, 27);
             radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(70, 19);
+            radioButton1.Size = new Size(55, 19);
             radioButton1.TabIndex = 4;
             radioButton1.TabStop = true;
-            radioButton1.Text = "Giriş Yap";
+            radioButton1.Text = "Login";
             radioButton1.UseVisualStyleBackColor = false;
             radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
@@ -100,10 +100,10 @@
             radioButton2.BackColor = Color.FromArgb(255, 224, 192);
             radioButton2.Location = new Point(150, 27);
             radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(66, 19);
+            radioButton2.Size = new Size(67, 19);
             radioButton2.TabIndex = 5;
             radioButton2.TabStop = true;
-            radioButton2.Text = "Kayıt Ol";
+            radioButton2.Text = "Register";
             radioButton2.UseVisualStyleBackColor = false;
             radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
@@ -112,18 +112,18 @@
             label1.AutoSize = true;
             label1.Location = new Point(31, 61);
             label1.Name = "label1";
-            label1.Size = new Size(71, 15);
+            label1.Size = new Size(60, 15);
             label1.TabIndex = 6;
-            label1.Text = "Kullanıcı adı";
+            label1.Text = "Username";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(31, 105);
             label2.Name = "label2";
-            label2.Size = new Size(30, 15);
+            label2.Size = new Size(57, 15);
             label2.TabIndex = 7;
-            label2.Text = "Şifre";
+            label2.Text = "Password";
             // 
             // textBox3
             // 
@@ -140,9 +140,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(31, 149);
             label3.Name = "label3";
-            label3.Size = new Size(64, 15);
+            label3.Size = new Size(91, 15);
             label3.TabIndex = 9;
-            label3.Text = "Tekrar Şifre";
+            label3.Text = "Password Again";
             label3.Visible = false;
             // 
             // button3
@@ -152,7 +152,7 @@
             button3.Name = "button3";
             button3.Size = new Size(75, 36);
             button3.TabIndex = 10;
-            button3.Text = "Tamam";
+            button3.Text = "OK";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 

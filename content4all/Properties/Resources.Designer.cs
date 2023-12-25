@@ -63,6 +63,16 @@ namespace content4all.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _6456 {
+            get {
+                object obj = ResourceManager.GetObject("6456", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap astro {
             get {
                 object obj = ResourceManager.GetObject("astro", resourceCulture);
@@ -73,9 +83,9 @@ namespace content4all.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap down2 {
+        internal static System.Drawing.Bitmap down {
             get {
-                object obj = ResourceManager.GetObject("down2", resourceCulture);
+                object obj = ResourceManager.GetObject("down", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +93,9 @@ namespace content4all.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap en__Custom_ {
+        internal static System.Drawing.Bitmap en {
             get {
-                object obj = ResourceManager.GetObject("en (Custom)", resourceCulture);
+                object obj = ResourceManager.GetObject("en", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +103,9 @@ namespace content4all.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap OIG_VSd1fP {
+        internal static System.Drawing.Bitmap online12 {
             get {
-                object obj = ResourceManager.GetObject("OIG.VSd1fP", resourceCulture);
+                object obj = ResourceManager.GetObject("online12", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +113,29 @@ namespace content4all.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tr__Custom_ {
+        internal static System.Drawing.Bitmap Refresh24 {
             get {
-                object obj = ResourceManager.GetObject("tr (Custom)", resourceCulture);
+                object obj = ResourceManager.GetObject("Refresh24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skyam {
+            get {
+                object obj = ResourceManager.GetObject("skyam", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tr {
+            get {
+                object obj = ResourceManager.GetObject("tr", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,16 +146,6 @@ namespace content4all.Properties {
         internal static System.Drawing.Bitmap up {
             get {
                 object obj = ResourceManager.GetObject("up", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap up2 {
-            get {
-                object obj = ResourceManager.GetObject("up2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

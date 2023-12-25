@@ -6,9 +6,6 @@
         public string Title { get; set; }
         public string Author { get; set; }
         public int Ups { get; set; }
-        //under construction
-        //public int width = 0;
-        //public int height = 0;
 
         public Content(int id, string title, string author, int ups)
         {

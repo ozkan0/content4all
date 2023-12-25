@@ -50,6 +50,7 @@
             Controls.Add(listBox1);
             Name = "Members";
             Text = "Members";
+            FormClosed += Members_FormClosed;
             Load += Members_Load;
             ResumeLayout(false);
         }

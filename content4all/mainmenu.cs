@@ -6,9 +6,10 @@ namespace content4all
 {
     public partial class mainmenu : Form
     {
-        //username passing changed from through construct to static property
+        public static bool MembersFormOpen = false;
+        public static bool CRequestFormOpen = false;
         public static string kullaniciadi { get; set; }
-        Contents.ContentDictionary contentDictionary = new Contents.ContentDictionary();
+        ContentDictionary contentDictionary = new ContentDictionary();
         public mainmenu()
         {
             InitializeComponent();
@@ -62,11 +63,34 @@ namespace content4all
             p.StartInfo = psi;
             p.Start();
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
-            Members members = new();
-            members.Show();
+            if(CRequestFormOpen == true)
+            {
+                MessageBox.Show("Content Request form is already open.", "Info");
+                return;
+            }
+            else
+            {
+                ContentRequest contentRequest = new();
+                CRequestFormOpen = true;
+                contentRequest.Show();
+            }
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (MembersFormOpen == true)
+            {
+                MessageBox.Show("Members form is already open.","Info");
+                return;
+            }
+            else
+            {
+                Members members = new();
+                MembersFormOpen = true;
+                members.Show();
+            }
         }
     }
 }

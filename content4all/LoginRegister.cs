@@ -1,6 +1,3 @@
-using Contents;
-using System.Security.Cryptography.X509Certificates;
-
 namespace content4all
 {
     public partial class LoginRegister : Form
@@ -60,21 +57,19 @@ namespace content4all
                 if (textBox2.Text == textBox3.Text && textBox2.Text != "")
                 {
                     kullanicilar.Add(textBox1.Text, textBox2.Text);
-                    StatusGreen(); toolStripStatusLabel1.Text = "Kayýt baþarýlý.";
+                    StatusGreen(); toolStripStatusLabel1.Text = "Registration successful.";
                     radioButton1.Checked = true;
-                    textBox1.Clear();
-                    textBox2.Clear();
-                    textBox3.Clear();
+                    textBox2.Clear();textBox3.Clear();
                 }
                 else if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
                 {
                     StatusRed();
-                    toolStripStatusLabel1.Text = "Lütfen boþ býrakmayýn.";
+                    toolStripStatusLabel1.Text = "Please fill all the fields.";
                 }
                 else
                 {
                     StatusRed();
-                    toolStripStatusLabel1.Text = "Þifreleri kontrol ediniz.";
+                    toolStripStatusLabel1.Text = "Passwords do not match.";
 
                 }
             }
@@ -86,7 +81,7 @@ namespace content4all
                     this.Hide();
                     mainmenu main = new();
                     members.SetMembers(kullanicilar);
-                    toolStripStatusLabel1.Text = "Giriþ baþarýlý.";
+                    toolStripStatusLabel1.Text = "Login successful.";
                     main.ShowDialog();
 
                     ///////////////////
@@ -95,12 +90,12 @@ namespace content4all
                 else if (textBox1.Text == "" || textBox2.Text == "")
                 {
                     StatusRed();
-                    toolStripStatusLabel1.Text = "Lütfen boþ býrakmayýn.";
+                    toolStripStatusLabel1.Text = "Please fill all the fields.";
                 }
                 else
                 {
                     StatusRed();
-                    toolStripStatusLabel1.Text = "Giriþ bilgileri hatalý.";
+                    toolStripStatusLabel1.Text = "Username or password is incorrect.";
                 }
             }
         }
