@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace content4all
 {
     public partial class LoginRegister : Form
@@ -6,15 +8,18 @@ namespace content4all
         {
             InitializeComponent();
         }
-
-        Dictionary<string, string> kullanicilar = new Dictionary<string, string>();
+        public static Dictionary<string, User> Users = new Dictionary<string, User>();
         Members members = new();
 
         private void LoginRegister_Load(object sender, EventArgs e)
         {
-            kullanicilar.Add("unfaithfuleagle", "usa10033");
-            kullanicilar.Add("hans2", "creature54");
-            kullanicilar.Add("dono", "123321");
+            //pre-set users to test Members form, not required to delete
+            User unfeagle = new User("unfaithfuleagle", "usa10033");
+            User hans = new User("hans2", "creature54");
+            User dono = new User("dono", "123321");
+            Users.Add("unfaithfuleagle", unfeagle);
+            Users.Add("hans2", hans);
+            Users.Add("dono", dono);
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -54,12 +59,18 @@ namespace content4all
         {
             if (radioButton2.Checked)
             {
-                if (textBox2.Text == textBox3.Text && textBox2.Text != "")
+                if (Users.ContainsKey(textBox1.Text))
                 {
-                    kullanicilar.Add(textBox1.Text, textBox2.Text);
+                    StatusRed();
+                    toolStripStatusLabel1.Text = "Username already exists.";
+                }
+                else if (textBox2.Text == textBox3.Text && textBox2.Text != "")
+                {
+                    User user = new User(textBox1.Text, textBox2.Text);
+                    Users.Add(textBox1.Text, user);
                     StatusGreen(); toolStripStatusLabel1.Text = "Registration successful.";
                     radioButton1.Checked = true;
-                    textBox2.Clear();textBox3.Clear();
+                    textBox2.Clear(); textBox3.Clear();
                 }
                 else if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
                 {
@@ -75,30 +86,47 @@ namespace content4all
             }
             else if (radioButton1.Checked)
             {
-                if (kullanicilar.ContainsKey(textBox1.Text) && kullanicilar[textBox1.Text] == textBox2.Text)
-                {
-                    mainmenu.kullaniciadi = textBox1.Text;
-                    this.Hide();
-                    mainmenu main = new();
-                    members.SetMembers(kullanicilar);
-                    toolStripStatusLabel1.Text = "Login successful.";
-                    main.ShowDialog();
 
-                    ///////////////////
-                    Application.Exit();
-                }
-                else if (textBox1.Text == "" || textBox2.Text == "")
+                if (Users.ContainsKey(textBox1.Text))
                 {
-                    StatusRed();
-                    toolStripStatusLabel1.Text = "Please fill all the fields.";
+                    if (Users[textBox1.Text].Password == textBox2.Text)
+                    {
+                        StatusGreen();
+                        toolStripStatusLabel1.Text = "Login successful.";
+                        members.SetMembers(Users);
+                        //mainmenu main = new();
+                        mainmenu.kullaniciadi = textBox1.Text;
+                        //main.ShowDialog();
+                        this.Hide();
+                        var main = new mainmenu();
+                        main.Closed += (s, args) => this.Close();
+                        main.Show();
+                    }
+                    else
+                    {
+                        StatusRed();
+                        toolStripStatusLabel1.Text = "Wrong password.";
+                    }
                 }
                 else
                 {
                     StatusRed();
-                    toolStripStatusLabel1.Text = "Username or password is incorrect.";
+                    toolStripStatusLabel1.Text = "Username does not exist.";
                 }
             }
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+            Process pp = new();
+            ProcessStartInfo psi = new();
+            psi.FileName = "PP.html";
+            psi.UseShellExecute = true;
+            psi.Verb = "open";
+            pp.StartInfo = psi;
+            pp.Start();
+
+        }
     }
 }

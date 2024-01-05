@@ -1,32 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="content4all.LoginRegister">
-    <Position X="4.5" Y="2" Width="1.5" />
+  <Class Name="content4all.ContentRequest">
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACEAAAABACQAABAAAACAAABCAEA4AAgAEHAIAAAAgAM=</HashCode>
+      <HashCode>ACAAAAAACCAgABAQAACAAADCAAAYAAAAEGAQAABAAAI=</HashCode>
+      <FileName>ContentRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="content4all.LoginRegister">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAABACQAABAAAACAAABCIAA4AAwAEHEAAAAAgAM=</HashCode>
       <FileName>LoginRegister.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="content4all.mainmenu">
-    <Position X="6.5" Y="2.5" Width="1.5" />
+    <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAABAAAASAAAICAEA4AAAAAXAIAQBAAAA=</HashCode>
+      <HashCode>AAEAABAABCAAABAAAAyAAAICAMA8AAAAAXAMAQBABAA=</HashCode>
       <FileName>mainmenu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="content4all.Members">
-    <Position X="2.75" Y="3.75" Width="1.5" />
+    <Position X="5.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAACAAAAAAAECAAAACAAAAAAAAAAAAAAAAACA=</HashCode>
+      <HashCode>AAAAAAEAQCAAAAAAAECAAAACAAAAAAAAAAAgAAAAACA=</HashCode>
       <FileName>Members.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="content4all.Program">
-    <Position X="8.5" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
-    </TypeIdentifier>
+  <Class Name="Contents.Content">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Contents.ContentDictionary">
+    <Position X="7.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Contents.CRequests">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

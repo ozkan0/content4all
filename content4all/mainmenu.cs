@@ -1,6 +1,8 @@
-﻿using Contents;
+﻿using content4all.Properties;
+using Contents;
 using System.Diagnostics;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace content4all
 {
@@ -9,6 +11,7 @@ namespace content4all
         public static bool MembersFormOpen = false;
         public static bool CRequestFormOpen = false;
         public static string kullaniciadi { get; set; }
+        bool busy = false;
         ContentDictionary contentDictionary = new ContentDictionary();
         public mainmenu()
         {
@@ -55,17 +58,17 @@ namespace content4all
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process p = new();
+            Process tou = new();
             ProcessStartInfo psi = new();
             psi.FileName = "TOU.html";
             psi.UseShellExecute = true;
             psi.Verb = "open";
-            p.StartInfo = psi;
-            p.Start();
+            tou.StartInfo = psi;
+            tou.Start();
         }
         private void button5_Click(object sender, EventArgs e)
         {
-            if(CRequestFormOpen == true)
+            if (CRequestFormOpen == true)
             {
                 MessageBox.Show("Content Request form is already open.", "Info");
                 return;
@@ -82,7 +85,7 @@ namespace content4all
         {
             if (MembersFormOpen == true)
             {
-                MessageBox.Show("Members form is already open.","Info");
+                MessageBox.Show("Members form is already open.", "Info");
                 return;
             }
             else
@@ -91,6 +94,28 @@ namespace content4all
                 MembersFormOpen = true;
                 members.Show();
             }
+        }
+        private void Busy()
+        {
+            if (busy == false)
+            {
+                pictureBox3.Image = Properties.Resources.offline12;
+                busy = true;
+            }
+            else
+            {
+                pictureBox3.Image = Properties.Resources.online12;
+                busy = false;
+            }
+        }
+        private void label5_DoubleClick(object sender, EventArgs e)
+        {
+            Busy();
+        }
+
+        private void pictureBox3_DoubleClick(object sender, EventArgs e)
+        {
+            Busy();
         }
     }
 }

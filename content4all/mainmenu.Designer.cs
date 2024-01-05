@@ -210,10 +210,10 @@
             linkLabel1.AutoSize = true;
             linkLabel1.Location = new Point(335, 459);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(27, 15);
+            linkLabel1.Size = new Size(29, 15);
             linkLabel1.TabIndex = 5;
             linkLabel1.TabStop = true;
-            linkLabel1.Text = "TOS";
+            linkLabel1.Text = "TOU";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // label5
@@ -225,6 +225,7 @@
             label5.Size = new Size(64, 14);
             label5.TabIndex = 6;
             label5.Text = "username";
+            label5.DoubleClick += label5_DoubleClick;
             // 
             // button5
             // 
@@ -247,6 +248,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox3.TabIndex = 9;
             pictureBox3.TabStop = false;
+            pictureBox3.DoubleClick += pictureBox3_DoubleClick;
             // 
             // mainmenu
             // 
@@ -259,6 +261,8 @@
             Controls.Add(label5);
             Controls.Add(linkLabel1);
             Controls.Add(groupBox1);
+            MaximumSize = new Size(390, 519);
+            MinimumSize = new Size(390, 519);
             Name = "mainmenu";
             Text = "HomePage";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

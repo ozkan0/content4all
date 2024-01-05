@@ -213,6 +213,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Silver;
             ClientSize = new Size(421, 355);
             Controls.Add(button2);
             Controls.Add(label7);
@@ -231,6 +232,8 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(comboBox1);
+            MaximumSize = new Size(437, 394);
+            MinimumSize = new Size(437, 394);
             Name = "ContentRequest";
             Text = "Content Request Form";
             FormClosed += ContentRequest_FormClosed;

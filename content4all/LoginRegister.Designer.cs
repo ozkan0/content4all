@@ -41,13 +41,14 @@
             button3 = new Button();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
+            linkLabel1 = new LinkLabel();
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
             // 
             button1.BackgroundImage = Properties.Resources.tr;
-            button1.Location = new Point(12, 206);
+            button1.Location = new Point(31, 206);
             button1.Name = "button1";
             button1.Size = new Size(30, 30);
             button1.TabIndex = 0;
@@ -57,7 +58,7 @@
             // button2
             // 
             button2.BackgroundImage = Properties.Resources.en;
-            button2.Location = new Point(43, 206);
+            button2.Location = new Point(62, 206);
             button2.Name = "button2";
             button2.Size = new Size(30, 30);
             button2.TabIndex = 1;
@@ -148,7 +149,7 @@
             // button3
             // 
             button3.BackColor = Color.FromArgb(192, 255, 192);
-            button3.Location = new Point(98, 203);
+            button3.Location = new Point(112, 203);
             button3.Name = "button3";
             button3.Size = new Size(75, 36);
             button3.TabIndex = 10;
@@ -170,11 +171,23 @@
             toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             toolStripStatusLabel1.Size = new Size(0, 17);
             // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Location = new Point(204, 221);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(80, 15);
+            linkLabel1.TabIndex = 13;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Privacy Policy";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
             // LoginRegister
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(284, 261);
+            Controls.Add(linkLabel1);
             Controls.Add(statusStrip1);
             Controls.Add(button3);
             Controls.Add(label3);
@@ -213,5 +226,6 @@
         private Button button3;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabel1;
+        private LinkLabel linkLabel1;
     }
 }

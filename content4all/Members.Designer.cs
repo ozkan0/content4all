@@ -37,9 +37,9 @@
             listBox1.Font = new Font("Comic Sans MS", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(5, 11);
+            listBox1.Location = new Point(5, 4);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(172, 139);
+            listBox1.Size = new Size(172, 154);
             listBox1.TabIndex = 0;
             // 
             // Members

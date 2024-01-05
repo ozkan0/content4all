@@ -103,6 +103,16 @@ namespace content4all.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap offline12 {
+            get {
+                object obj = ResourceManager.GetObject("offline12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap online12 {
             get {
                 object obj = ResourceManager.GetObject("online12", resourceCulture);

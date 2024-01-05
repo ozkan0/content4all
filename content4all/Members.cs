@@ -2,20 +2,21 @@
 {
     public partial class Members : Form
     {
-        private static Dictionary<string, string> memberList;
+        private Dictionary<string, User> Users = LoginRegister.Users;
         public Members()
         {
             InitializeComponent();
-            //this.memberList = memberList;
         }
-        public void SetMembers(Dictionary<string, string> members) { memberList = members; }
+        public void SetMembers(Dictionary<string, User> Users)
+        {
+            this.Users = Users;
+        }
         private void Members_Load(object sender, EventArgs e)
         {
-            foreach (var pair in memberList)
+            foreach (var pair in Users)
             {
                 listBox1.Items.Add(pair.Key);
             }
-
         }
 
         private void Members_FormClosed(object sender, FormClosedEventArgs e)

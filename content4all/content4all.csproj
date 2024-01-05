@@ -9,20 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="bin\**" />
-    <EmbeddedResource Remove="bin\**" />
-    <None Remove="bin\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="TOU.html" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="TOU.html" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Contents\Contents.csproj" />
   </ItemGroup>
 
